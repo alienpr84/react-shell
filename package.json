@@ -1,0 +1,28 @@
+{
+  "name": "react-shell",
+  "version": "1.0.0",
+  "description": "Boilerplate for react applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alienpr84/react-shell.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "javascript",
+    "typescript",
+    "webpack",
+    "toolchain",
+    "babel"
+  ],
+  "author": "Alien Padilla Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alienpr84/react-shell/issues"
+  },
+  "homepage": "https://github.com/alienpr84/react-shell#readme"
+}
