@@ -1,5 +1,55 @@
+* {
+	box-sizing: border-box;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
 .container {
-	background-color: black;
+	align-items: center;
+	background-color: #333;
+	display: flex;
 	height: 100vh;
+	justify-content: center;
 	width: 100vw;
 }
+
+figcaption {
+	color: #bbbbbb;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+img {
+	box-shadow: 0px 0px 1px 1px #0000001a;
+}
+
+.rotate {
+	animation: rotation infinite 20s linear;
+	border-radius: 100%;
+}
+
+.pulse {
+	animation: pulse-animation 2s infinite;
+	border-radius: 100%;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 0 0px rgba(234, 122, 122, 0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 15px rgba(234, 122, 122, 0.02);
+	}
+}
+
