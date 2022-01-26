@@ -1,16 +1,15 @@
 import React from 'react';
-import ReactShellLogo from '../public/assets/images/logo.jpg';
 import './App.css';
 
 function App() {
 	return (
 		<div className='container'>
-			<figure>
+			<div>
 				<div className='pulse'>
-					<img className='rotate' src={ReactShellLogo} alt='react shell logo' />
+					<div className='rotate'></div>
 				</div>
-				<figcaption>React Shell</figcaption>
-			</figure>
+				<h1>React Shell</h1>
+			</div>
 		</div>
 	);
 }

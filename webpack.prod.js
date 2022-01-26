@@ -1,4 +1,4 @@
-const { join } = require('path');
+const { resolve, join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
@@ -8,20 +8,21 @@ module.exports = merge(common, {
 	devtool: 'source-map',
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: join(__dirname, 'public', 'index.html'),
+			template: resolve(__dirname, 'public', 'index.html'),
+			favicon: resolve(__dirname, 'public', 'favicon.ico'),
 			filename: 'index.html',
 			inject: 'body',
 		}),
 	],
 	output: {
-		filename: 'bundle.js',
-		path: join(__dirname, 'dist'),
+		path: resolve(__dirname, 'dist'),
+		filename: 'js/[name].bundle.[contenthash].js',
 		clean: true,
 	},
 	module: {
 		rules: [
 			{
-				test: /\.(js|jsx)$/,
+				test: /\.(js|jsx)$/i,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 				options: {

@@ -1,4 +1,4 @@
-const { join } = require('path');
+const { resolve } = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const { merge } = require('webpack-merge');
@@ -8,12 +8,12 @@ module.exports = merge(common, {
 	mode: 'development',
 	target: 'web',
 	devServer: {
-		port: 4001,
 		hot: true,
+		port: 4001,
 	},
 	plugins: [
 		new HTMLWebpackPlugin({
-			template: join(__dirname, 'public', 'index.html'),
+			template: resolve(__dirname, 'public', 'index.html'),
 		}),
 		new ReactRefreshWebpackPlugin(),
 	],

@@ -1,7 +1,7 @@
-const { join } = require('path');
+const { join, resolve } = require('path');
 
 module.exports = {
-	entry: join(__dirname, 'src', 'index.jsx'),
+	entry: resolve(__dirname, 'src', 'index.jsx'),
 	resolve: {
 		modules: [__dirname, 'src', 'node_modules'],
 		extensions: ['*', '.js', '.jsx']
@@ -9,12 +9,15 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.css$/,
+				test: /\.css$/i,
 				use: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.png|jpg|svg|gif|ico$/,
-				use: ['file-loader']
+				test: /\.png|jpg|svg|gif|ico$/i,
+				type: 'asset/resource',
+				generator: {
+					filename: join('images', '[contenthash][ext][query]'),
+				},
 			},
 		],
 	},
