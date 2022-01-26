@@ -4,11 +4,12 @@ import './App.css';
 function App() {
 	return (
 		<div className='container'>
-			<div>
+			<div className='react-shell'>
 				<div className='pulse'>
 					<div className='rotate'></div>
 				</div>
-				<h1>React Shell</h1>
+				<h1>Reactjs Shell</h1>
+				<h2>A reactjs toolchain with minimal dependencies</h2>
 			</div>
 		</div>
 	);
