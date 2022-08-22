@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { GrettingOne } from './Components/GrettingOne';
+import { GrettingTwo } from './Components/GrettingTwo';
 
 function App() {
 	return (
@@ -10,6 +12,8 @@ function App() {
 				</div>
 				<h1>Reactjs Shell</h1>
 				<h2>A reactjs toolchain with minimal dependencies</h2>
+				<GrettingOne />
+				<GrettingTwo />
 			</div>
 		</div>
 	);
